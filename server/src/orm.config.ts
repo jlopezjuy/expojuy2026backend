@@ -35,14 +35,14 @@ function ormConfig(): TypeOrmModuleOptions {
   } else if (process.env.BACKEND_ENV === 'dev') {
     ormconfig = {
       name: 'default',
-      type: 'mysql',
+      type: 'mariadb',
       // typeorm fails to auto load driver due to workspaces resolution
-      driver: require('sqlite3'),
+      //driver: require(''),
       database: 'expoJujuy',
       host: '127.0.0.1',
       // port: ,
       username: 'root',
-      password: '',
+      password: 'dsfjMs12AK',
       logging: false,
     };
   } else {
