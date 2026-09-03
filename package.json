@@ -1,0 +1,57 @@
+{
+  "name": "expo-jujuy",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Description for expoJujuy",
+  "license": "UNLICENSED",
+  "type": "module",
+  "workspaces": [
+    "server"
+  ],
+  "scripts": {
+    "app:up": "docker compose -f docker/app.yml up --wait",
+    "build": "npm run build -w server && npm run build -w client",
+    "build:app": "npm run build -w server",
+    "ci:e2e:prepare": "npm run ci:e2e:prepare:docker",
+    "ci:e2e:prepare:docker": "npm run services:up --if-present && docker ps -a",
+    "ci:e2e:teardown": "npm run ci:e2e:teardown:docker --if-present",
+    "ci:e2e:teardown:docker": "docker compose -f docker/services.yml down -v && docker ps -a",
+    "docker:db:down": "docker compose -f docker/mysql.yml down -v",
+    "docker:db:up": "docker compose -f docker/mysql.yml up --wait",
+    "lint:fix": "echo \"INFO: no client found\"",
+    "prepare": "husky",
+    "prettier:check": "prettier --check \"{,.blueprint/**/}*.{md,json,yml,js,cjs,mjs,ts,cts,mts}\"",
+    "prettier:format": "prettier --write \"{,.blueprint/**/}*.{md,json,yml,js,cjs,mjs,ts,cts,mts}\"",
+    "services:up": "docker compose -f docker/services.yml up --wait",
+    "start": "concurrently -k -s first -n application,client -c red,green npm:start:server npm:start:client",
+    "start:client": "npm run start -w client",
+    "start:server": "npm run start -w server",
+    "test": "echo \"INFO: no client test found\"",
+    "test:client": "npm test -w client",
+    "test:server": "npm test -w server",
+    "test:server:e2e": "npm run test:e2e -w server"
+  },
+  "config": {
+    "default_environment": "prod"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "browser-sync-client": "3.0.4",
+    "eslint": "10.7.0",
+    "eslint-config-prettier": "10.1.8",
+    "generator-jhipster": "9.2.0",
+    "generator-jhipster-nodejs": "4.0.0",
+    "globals": "17.7.0",
+    "husky": "9.1.7",
+    "lint-staged": "17.0.8",
+    "prettier": "3.9.5",
+    "prettier-plugin-packagejson": "3.0.2",
+    "typescript-eslint": ""
+  },
+  "engines": {
+    "node": ">=24.18.0"
+  },
+  "cacheDirectories": [
+    "node_modules"
+  ]
+}

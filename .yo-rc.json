@@ -1,0 +1,30 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "authenticationType": "jwt",
+    "baseName": "expoJujuy",
+    "blueprints": [
+      {
+        "name": "generator-jhipster-nodejs",
+        "version": "4.0.0"
+      }
+    ],
+    "clientFramework": "no",
+    "clientTestFrameworks": null,
+    "clientTheme": null,
+    "creationTimestamp": 1788399585828,
+    "databaseType": "sql",
+    "defaultCommand": "app",
+    "entities": [],
+    "jhipsterVersion": "9.2.0",
+    "microfrontend": null,
+    "microfrontends": [],
+    "prodDatabaseType": "mysql",
+    "serverPort": null,
+    "skipClient": true,
+    "withAdminUi": null
+  },
+  "generator-jhipster-nodejs": {
+    "nodejsVersion": "4.0.0"
+  }
+}

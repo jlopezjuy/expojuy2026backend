@@ -1,0 +1,26 @@
+name: expojujuy
+services:
+  app:
+    build: ..
+    environment:
+      - BACKEND_ENV=prod
+    ports:
+      - 8080:8080
+    healthcheck:
+      test:
+        - CMD
+        - nc
+        - -vz
+        - -w1
+        - localhost
+        - '8080'
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    depends_on:
+      mysql:
+        condition: service_healthy
+  mysql:
+    extends:
+      file: ./mysql.yml
+      service: mysql
