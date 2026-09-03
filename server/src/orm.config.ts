@@ -15,7 +15,7 @@ function ormConfig(): TypeOrmModuleOptions {
       type: 'mysql',
       // typeorm fails to auto load driver due to workspaces resolution
       driver: require('mysql2'),
-      database: 'backend',
+      database: 'expoJujuy',
       host: 'mysql',
       // port: ,
       username: 'root',
@@ -38,7 +38,7 @@ function ormConfig(): TypeOrmModuleOptions {
       type: 'mysql',
       // typeorm fails to auto load driver due to workspaces resolution
       driver: require('sqlite3'),
-      database: 'backend',
+      database: 'expoJujuy',
       host: '127.0.0.1',
       // port: ,
       username: 'root',

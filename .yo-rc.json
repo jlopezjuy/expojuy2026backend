@@ -2,7 +2,7 @@
   "generator-jhipster": {
     "applicationType": "monolith",
     "authenticationType": "jwt",
-    "baseName": "backend",
+    "baseName": "expoJujuy",
     "blueprints": [
       {
         "name": "generator-jhipster-nodejs",
@@ -12,7 +12,7 @@
     "clientFramework": "no",
     "clientTestFrameworks": null,
     "clientTheme": null,
-    "creationTimestamp": 1788393521615,
+    "creationTimestamp": 1788399585828,
     "databaseType": "sql",
     "defaultCommand": "app",
     "entities": [],

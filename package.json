@@ -1,8 +1,8 @@
 {
-  "name": "backend",
+  "name": "expo-jujuy",
   "version": "0.0.0",
   "private": true,
-  "description": "Description for backend",
+  "description": "Description for expoJujuy",
   "license": "UNLICENSED",
   "type": "module",
   "workspaces": [

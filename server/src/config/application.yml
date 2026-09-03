@@ -22,8 +22,8 @@ eureka:
     instance-info-replication-interval-seconds: 10
     registry-fetch-interval-seconds: 10
   instance:
-    appname: backend
-    instanceId: backend:${random.value}
+    appname: expoJujuy
+    instanceId: expoJujuy:${random.value}
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
     status-page-url-path: ${management.endpoints.web.base-path}/info
@@ -43,7 +43,7 @@ eureka:
 
 jhipster:
   clientApp:
-    name: 'backend'
+    name: 'expoJujuy'
   registry:
     password: admin
   security:
@@ -55,11 +55,11 @@ jhipster:
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000
   mail:
-    from: backend@localhost
+    from: expoJujuy@localhost
   swagger:
     default-include-pattern: /api/.*
-    title: backend API
-    description: backend API documentation
+    title: expoJujuy API
+    description: expoJujuy API documentation
     version: 0.0.1
     terms-of-service-url:
     contact-name:
@@ -73,7 +73,7 @@ cloud:
   config:
     uri: http://admin:${jhipster.registry.password}@localhost:8761/config
     # name of the config server's property source (file.yml) that we want to use
-    name: backend
+    name: expoJujuy
     profile: prod # profile(s) of the property source
     label: master # toggle to switch to a different version of the configuration as stored in git
     # it can be set to any label, branch or commit of the configuration source Git repository

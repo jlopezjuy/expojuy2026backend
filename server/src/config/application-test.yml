@@ -35,7 +35,7 @@ server:
 
 jhipster:
   mail: # specific JHipster mail property, for standard properties see MailProperties
-    from: backend@localhost
+    from: expoJujuy@localhost
     base-url: http://127.0.0.1:8082
 
 # ===================================================================
