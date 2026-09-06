@@ -15,11 +15,11 @@ function ormConfig(): TypeOrmModuleOptions {
       type: 'mysql',
       // typeorm fails to auto load driver due to workspaces resolution
       driver: require('mysql2'),
-      database: 'expoJujuy',
-      host: 'mysql',
-      // port: ,
-      username: 'root',
-      password: '',
+      database: process.env.DB_DATABASE || 'expoJujuy',
+      host: process.env.DB_HOST || 'mysql',
+      port: process.env.DB_PORT ? Number(process.env.DB_PORT) : 3306,
+      username: process.env.DB_USER || 'root',
+      password: process.env.DB_PASSWORD !== undefined ? process.env.DB_PASSWORD : '',
       logging: false,
       // synchronize: false,
     };

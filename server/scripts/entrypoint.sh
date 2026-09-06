@@ -3,4 +3,5 @@
 sleep 10
 # npm run typeorm:migration:run -w server
 # npm run typeorm:schema:sync -w server
-exec node /usr/node-app/server/dist/main.js
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+exec node "${SCRIPT_DIR}/../dist/main.js"
